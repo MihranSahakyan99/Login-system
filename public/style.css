@@ -1,0 +1,108 @@
+
+body {
+    background-color: #313a47;
+}
+
+#profile {
+    height: auto;
+    width: auto;
+    max-width: 960px;
+    background-color: #ffffff;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+.about-block {
+    float: left;
+    width: 60%;
+}
+
+.about-block > h1 {
+    font-weight: 600;
+}
+
+.about-block > h1 > span {
+    font-weight: 300;
+}
+
+.avatar {
+    float: left;
+    width: 40%;
+}
+
+.profile-footer {
+    height: 30px;
+    width: 100%;
+    max-width: 960px;
+    background-color: red;
+    margin: 0 auto;
+}
+
+.chat-block {
+    padding: 0 15px 15px 15px;
+}
+
+.block-2 {
+    display: none;
+}
+
+#chat-window {
+    min-height: 300px;
+    overflow: auto;
+    background: #f9f9f9;
+}
+
+#output p {
+    padding: 14px 0;
+    margin: 0 20px;
+    border-bottom: 1px solid #e9e9e9;
+    color: #555;
+}
+
+#feedback p {
+    color: #aaa;
+    padding: 14px 0;
+    margin: 0 20px;
+}
+
+#output strong {
+    color: #575ed8;
+}
+
+label {
+    box-sizing: border-box;
+    display: block;
+    padding: 10px 20px;
+}
+
+input {
+    padding: 10px 20px;
+    box-sizing: border-box;
+    background: #eee;
+    border: 0;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    font-family: Nunito;
+    font-size: 16px;
+}
+
+.custom-btn-group {
+    margin: 5px 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.active-users-list {
+    margin: 0;
+    padding: 0;
+}
+
+.active-user {
+    margin: 2px 0;
+    font-size: 20px;
+    color: red;
+    cursor: pointer;
+}

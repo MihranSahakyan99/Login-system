@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Profile</title>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+        <link rel="stylesheet" href="../public/style.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <style>
+            body{ padding-top:80px; }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+                <div class="container" id="profile">
+                    <div class="block-1">
+                        <div class="avatar">
+                            <img src="http://i.imgur.com/HQ3YU7n.gif" width="70%">
+                        </div>
+                        <div class="about-block">
+                            <% if (user.local.email) { %>
+                                <h1><span>Hello </span><%= user.local.name %></h1>
+                                <ul>
+                                <li>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</li>
+                                <li>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</li>
+                                <li>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</li>
+                                <li>bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla</li>
+                            </ul>
+                            <% } %>
+                            <a class="btn btn-default btn-sm" id="msg">Chat</a>
+                            <a href="/logout" id="log-out" class="btn btn-default btn-sm">Logout</a>
+                        </div>
+                    </div>
+                    <div class="block-2">
+                        <div class="chat-block">
+                            <h1>Chat</h1>
+                            <div class="col-sm-8 chat darker pull-left">
+                                <div id="chat-window">
+                                    <div id="output"></div>
+                                </div>
+                                <input id="handle" type="text" placeholder="Handle" value='<%= user.local.name%>' style="display: none"/>
+                                <input id="message" type="text" placeholder="Message" />
+                                <div id="to"></div>
+
+                                <div class="custom-btn-group">
+                                    <button class="btn btn-default btn-sm" id="bc-prf">Back to profile</button>
+                                    <button class="btn btn-primary btn-sm pull-right" id="send">Send</button>
+                                </div>
+                            </div>
+
+                            <div class="block-4">
+                                <h1>Active Users</h1>
+                                <div class="col-sm-4 pull-left no-padding">
+                                    <div class="active-user-block">
+                                        <ul class="active-users-list list-group"></ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-footer"></div>
+        </div>
+        <script src="../public/chat.js"></script>
+    </body>
+</html>
